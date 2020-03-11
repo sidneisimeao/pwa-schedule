@@ -1,0 +1,28 @@
+{
+  "name": "Ramais",
+  "short_name": "Ramais Vila Nova",
+  "theme_color": "#00A69C",
+  "background_color": "#97a8b9",
+  "display": "standalone",
+  "orientation": "portrait",
+  "Scope": "/",
+  "start_url": "/index.html",
+  "icons": [
+    {
+      "src": "/src/assets/img/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/src/assets/img/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/src/assets/img/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": null
+}
