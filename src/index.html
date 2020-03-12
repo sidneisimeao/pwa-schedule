@@ -8,7 +8,7 @@
   <meta name="description" content="Lista de Ramais Vila Nova">
   <link rel="manifest" href="./manifest.json">
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900'>
-  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
   <link rel="stylesheet" href="./assets/css/main.css">
 
@@ -42,41 +42,29 @@
       </section>
       <!-- End Section Header Bar -->
 
-      <!-- Start Section Button List 
+      <!-- Start Section Button List -->
       <section id="sha_button_list" class="col-12">
         <div class="row">
           <div class="col-12">
             <ul>
               <li class="on">
                 <span>
-                  <i class="fa fa-home"></i>
-                </span>
-              </li>
-              <li class="off" id="buton">
-                <span>
-                  <i class="fa fa-lightbulb-o"></i>
-                </span>
-              </li>
-              <li class="off">
-                <span>
-                  <i class="fa fa-wifi"></i>
-                </span>
-              </li>
-              <li class="off">
-                <span>
-                  <i class="fa fa-snowflake-o"></i>
-                </span>
-              </li>
-              <li class="on">
-                <span>
-                  <i class="fa fa-plus"></i>
+                  <form autocomplete="off">
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="Pesquisar" id='input-search'
+                        aria-label="Recipient's username" aria-describedby="basic-addon2" value="">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" id='btn-clear' type="button">x</button>
+                      </div>
+                    </div>
+                  </form>
                 </span>
               </li>
             </ul>
           </div>
         </div>
       </section>
-      End Section Button List -->
+      <!--  End Section Button List -->
 
       <!-- Start Section Body 1 
       <section id="sha_temp_body" class="col-12">
@@ -96,11 +84,7 @@
      End Section Body 1 -->
 
       <!-- Start Section Body 2 -->
-      <section id="sha_temp_meta" class="col-12">
-
-
-
-      </section>
+      <section id="sha_temp_meta" class="col-12"></section>
       <!-- End Section Body 2 -->
 
       <!-- Start Section Footer
