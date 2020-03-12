@@ -690,3 +690,5 @@ const ramais = [
     ramal: 8448,
   },
 ];
+
+export default ramais;
