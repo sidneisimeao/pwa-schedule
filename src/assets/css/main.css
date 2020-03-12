@@ -20,6 +20,7 @@ body {
   font-size: 12px;
   font-weight: 500;
   padding-top: 10px;
+  color: rgba(49, 69, 106, 1);
 }
 
 #sha_header_bar span.heading {
@@ -197,7 +198,7 @@ body {
   display: inline-block;
   font-size: 16px;
   font-weight: 500;
-  color: rgba(49, 69, 106, 0.8);
+  color: #222;
   padding-left: 14px;
   margin-top: 5px;
 }
@@ -271,4 +272,15 @@ body {
 
 .yt:hover {
   background: rgba(0, 0, 0, 0.4);
+}
+
+.heading-department {
+  color: #222 !important;
+  font-size: 20px;
+  font-weight: 600;
+}
+.department {
+  color: #555 !important;
+  font-size: 12px;
+  font-weight: 600;
 }

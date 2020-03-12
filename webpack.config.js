@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -11,20 +10,17 @@ module.exports = {
   //devtool: 'inline-source-map',
   // webpack-dev-server
   devServer: {
-    contentBase: path.join(__dirname, './src/dist'),
+    contentBase: path.join(__dirname, './src'),
     compress: true,
     port: 9000,
-    index: 'index.html',
-  },
-  plugins: [
-    new CleanWebpackPlugin({}),
-    new webpack.HotModuleReplacementPlugin(),
-  ],
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
     publicPath: './',
   },
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, './src/dist'),
+    publicPath: './src',
+  },
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   module: {
     rules: [
       {
