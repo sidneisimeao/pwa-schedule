@@ -1,4 +1,3 @@
-import data from '../../data/data';
 import {
   clearSearchString,
   debounce,
@@ -9,7 +8,15 @@ import {
 
 const fecthData = debounce(event => {
   const search = event.target.value || '';
-  appendData(groupDataByDepartment(filterDataBySearch(data, search)));
+  fetch('/data/data.json')
+    .then(response => {
+      console.log(response);
+      appendData(groupDataByDepartment(filterDataBySearch(response, search)));
+    })
+    .catch(err => {
+      console.log(err);
+    });
+
   return event.target;
 }, 1000);
 
