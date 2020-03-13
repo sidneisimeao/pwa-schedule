@@ -18,7 +18,7 @@ html {
 
 body {
   background-color: #e3edf7;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 #sha_app {
@@ -315,4 +315,13 @@ body {
   color: white;
   background-color: rgba(49, 69, 106, 1);
   width: 40px;
+}
+
+::placeholder {
+  font-size: 0.9em;
+}
+
+#label-input {
+  position: absolute;
+  color: transparent;
 }

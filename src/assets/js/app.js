@@ -1,4 +1,4 @@
-import ramais from './ramais';
+import data from '../../data/data';
 import {
   clearSearchString,
   debounce,
@@ -9,7 +9,7 @@ import {
 
 const fecthData = debounce(event => {
   const search = event.target.value || '';
-  appendData(groupDataByDepartment(filterDataBySearch(ramais, search)));
+  appendData(groupDataByDepartment(filterDataBySearch(data, search)));
   return event.target;
 }, 500);
 
