@@ -11,7 +11,7 @@ const fecthData = debounce(event => {
   const search = event.target.value || '';
   appendData(groupDataByDepartment(filterDataBySearch(data, search)));
   return event.target;
-}, 500);
+}, 1000);
 
 window.onload = event => fecthData(event);
 
