@@ -106,7 +106,7 @@ export const clearSearchString = (event, clearInput = false) => {
   return event;
 };
 
-export function debounce(func, wait, immediate) {
+export const debounce = (func, wait, immediate) => {
   let timeout = null;
   return function() {
     const context = this,
@@ -120,4 +120,4 @@ export function debounce(func, wait, immediate) {
     timeout = setTimeout(later, wait);
     if (callNow) func.apply(context, args);
   };
-}
+};

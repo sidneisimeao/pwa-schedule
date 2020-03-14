@@ -10,8 +10,11 @@ const fecthData = debounce(event => {
   const search = event.target.value || '';
   fetch('/data/data.json')
     .then(response => {
-      console.log(response);
-      appendData(groupDataByDepartment(filterDataBySearch(response, search)));
+      response
+        .json()
+        .then(data =>
+          appendData(groupDataByDepartment(filterDataBySearch(data, search)))
+        );
     })
     .catch(err => {
       console.log(err);
