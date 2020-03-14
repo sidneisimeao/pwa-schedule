@@ -21,7 +21,7 @@ const fecthData = debounce(event => {
     });
 
   return event.target;
-}, 1000);
+}, 500);
 
 window.onload = event => fecthData(event);
 
