@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -9,12 +10,12 @@ module.exports = {
   // source maps
   //devtool: 'inline-source-map',
   // webpack-dev-server
-  /*devServer: {
+  devServer: {
     contentBase: path.join(__dirname, './src'),
     compress: true,
     port: 9000,
     publicPath: './',
-  },*/
+  },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './src/dist'),
@@ -34,6 +35,14 @@ module.exports = {
         test: /\.css$/,
         loaders: ['style-loader', 'css-loader'],
       },
+    ],
+  },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        test: /\.js(\?.*)?$/i,
+        extractComments: 'all',
+      }),
     ],
   },
 };
