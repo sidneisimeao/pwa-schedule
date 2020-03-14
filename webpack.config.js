@@ -9,18 +9,18 @@ module.exports = {
   // source maps
   //devtool: 'inline-source-map',
   // webpack-dev-server
-  devServer: {
+  /*devServer: {
     contentBase: path.join(__dirname, './src'),
     compress: true,
     port: 9000,
     publicPath: './',
-  },
+  },*/
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './src/dist'),
     publicPath: './src',
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  //plugins: [new webpack.HotModuleReplacementPlugin()],
   module: {
     rules: [
       {
