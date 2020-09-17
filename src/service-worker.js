@@ -1,7 +1,7 @@
 /** Current date */
 const date = new Date();
 
-/** Cache name */
+/** Cache name
 const currentCacheName =
   'pwa-cache-' +
   date.getFullYear() +
@@ -10,7 +10,7 @@ const currentCacheName =
   date.getHours() +
   date.getMinutes();
 
-/** Files to cache */
+/** Files to cache
 const filesToCache = [
   './',
   './index.html',
@@ -19,7 +19,7 @@ const filesToCache = [
   './dist/bundle.js',
 ];
 
-/** SW Installation */
+/** SW Installation
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(currentCacheName).then(function(cache) {
@@ -28,7 +28,7 @@ self.addEventListener('install', function(event) {
   );
 });
 
-/** SW Activate */
+/** SW Activate
 self.addEventListener('activate', function(event) {
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
@@ -44,7 +44,7 @@ self.addEventListener('activate', function(event) {
   );
 });
 
-/** SW Fetch */
+/** SW Fetch
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(response) {
@@ -52,3 +52,4 @@ self.addEventListener('fetch', function(event) {
     })
   );
 });
+*/
