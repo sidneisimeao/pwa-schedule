@@ -12,7 +12,7 @@ const fecthData = debounce((event) => {
   const search = event.target.value || '';
 
   axios
-    .get('http://conexao.vilanova.com.br:3333/api/schedule', {
+    .get('http://192.168.250.55:3333/api/schedule', {
       method: 'GET',
       mode: 'no-cors',
       headers: {
